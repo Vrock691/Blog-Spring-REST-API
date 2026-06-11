@@ -8,9 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-
-import java.util.NoSuchElementException;
 
 @Service
 public class ArticleService {
@@ -49,7 +46,7 @@ public class ArticleService {
     }
 
     public void deleteArticle(long id) throws ArticleDoesNotExistException {
-        Article article = articleRepository.findById(id).orElseThrow(ArticleDoesNotExistException::new);
+        articleRepository.findById(id).orElseThrow(ArticleDoesNotExistException::new);
         articleRepository.deleteById(id);
     }
 
