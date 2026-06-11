@@ -3,6 +3,7 @@ package fr.vamary.danativel.blog.spring.rest.api.service;
 import fr.vamary.danativel.blog.spring.rest.api.dto.ArticleDTO;
 import fr.vamary.danativel.blog.spring.rest.api.dto.ArticleMapper;
 import fr.vamary.danativel.blog.spring.rest.api.entity.Article;
+import fr.vamary.danativel.blog.spring.rest.api.exception.ArticleDoesNotExistException;
 import fr.vamary.danativel.blog.spring.rest.api.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
